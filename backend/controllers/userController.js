@@ -6,7 +6,7 @@ const getUsers = async (req, res) => {
     res.status(200).json({
       status: "success",
       results: users.length,
-      data: { users }
+      users
     });
   } catch (error) {
     res.status(400).json({

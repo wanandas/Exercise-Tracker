@@ -6,7 +6,7 @@ const getAllExercise = async (req, res) => {
     res.status(200).json({
       status: "success",
       results: exercises.length,
-      data: { exercises }
+      exercises
     });
   } catch (error) {
     res.status(400).json({
@@ -53,9 +53,8 @@ const updateExercise = async (req, res) => {
   try {
     res.status(200).json({
       status: "success",
-      data: {
-        exercise
-      }
+
+      exercise
     });
   } catch (error) {
     res.status(400).json({
